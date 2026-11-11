@@ -19,7 +19,7 @@ export default function LoginPage() {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
-        email: "",
+        username: "",
         password: "",
     });
 
@@ -56,13 +56,13 @@ export default function LoginPage() {
                 <CardContent>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-medium">Email</label>
+                            <label htmlFor="username" className="text-sm font-medium">Username</label>
                             <Input
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="you@example.com"
-                                value={formData.email}
+                                id="username"
+                                name="username"
+                                type="text"
+                                placeholder="fimperial"
+                                value={formData.username}
                                 onChange={handleChange}
                                 required
                                 disabled={isLoading}
