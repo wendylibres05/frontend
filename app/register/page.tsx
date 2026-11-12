@@ -20,7 +20,6 @@ export default function RegisterPage() {
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         username: "",
-        email: "",
         password: "",
     });
 
@@ -65,19 +64,6 @@ export default function RegisterPage() {
                                 type="text"
                                 placeholder="Your username"
                                 value={formData.username}
-                                onChange={handleChange}
-                                required
-                                disabled={isLoading}
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-medium">Email</label>
-                            <Input
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="you@example.com"
-                                value={formData.email}
                                 onChange={handleChange}
                                 required
                                 disabled={isLoading}
